@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style2.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>signup</title>
+  </head>
+  <body class="page w-full overflow-hidden h-screen bg-black text-white relative">
+    <div
+      class="cursor-blur  absolute h-[200px] w-[200px] rounded-full bg-my-n-yellow transition-all duration-75 ease-in-out"
+    ></div>
+
+
+
+    
+
+    <div
+      class="navbar relative z-20 w-full h-20 flex justify-between items-center pr-8 pl-8"
+    >
+      <div class="logo text-my-n-yellow inline-block relative">
+        <a href="/" class="logo-text font-bold text-xl">Yash Bishnoi</a>
+      </div>
+
+      <img class="absolute menu right-[15px] none top-[25px] h-10" src="/images/menu.svg" alt="">
+
+
+      <div class="right flex gap-8">
+        <a class="hov-big" href="/">Home</a>
+        <a class="hov-big" href="/contact">Contact</a>
+        <a
+          class="hov-big h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/login"
+          >Log in</a
+        >
+        <a
+          class="hov-big h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/signup"
+          >Sign up</a
+        >
+      </div>
+    </div>
+
+
+    <div class="nav-mobile transition-all duration-200 ease-in-out absolute backdrop-blur-lg  justify-center  items-centerc right-[15px]  top-[-415px] z-50  border-2 border-my-n-yellow h-96 w-[20rem]">
+      <div class="right flex flex-col gap-8 h-full justify-center items-center">
+        <a class="" href="/">Home</a>
+        <a class="" href="/contact">Contact</a>
+        <% if (isLoggedIn) { %>
+        <!-- Show "Profile Image" if user is logged in -->
+        <img
+          class="profile-img h-[3rem]"
+          src="/images/profile.png"
+          alt="profile"
+        />
+        <% } else { %>
+        <!-- Show "Log in" and "Sign up" buttons if user is not logged in -->
+        <a
+          class="hov-big h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/login"
+          >Log in</a
+        >
+        <a
+          class="sign-btn h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/signup"
+          >Sign up</a
+        >
+        <% } %>
+      </div>
+    </div>
+
+    <div
+      class="sign-up-form flex justify-center items-center w-full absolute mt-10"
+    >
+      <form 
+        id="registerForm"
+        class="  flex flex-col gap-10 items-center border-2 border-white p-5 pt-8 pb-8 h-[35rem]"
+        action="/register"
+        method="post"
+      >
+        <h1 class="sign-text font-bold text-4xl text-white">Sign up</h1>
+        <input
+          class="focus:border-my-n-yellow h-16 p-5 w-[28rem] text-white bg-transparent border-white border-2 outline-none"
+          type="text"
+          placeholder="Username"
+          name="username"
+        />
+        <input
+          class="focus:border-my-n-yellow h-16 p-5 w-[28rem] text-white bg-transparent border-white border-2 outline-none"
+          type="email"
+          placeholder="E-Mail"
+          name="email"
+        />
+        <input
+          class="focus:border-my-n-yellow h-16 p-5 w-[28rem] text-white bg-transparent border-white border-2 outline-none"
+          type="password"
+          placeholder="Password"
+          name="password"
+        />
+
+        <p id="popupMessage" class=" text-red-800 absolute top-96 mt-1 none ">All fields are required</p>
+
+        <input
+          class="hov-big transition-all duration-300 ease-in-out submit-btn shadow-black-y hover:shadow-none cursor-pointer text-black h-[2.25rem] w-[7rem] bg-my-n-yellow"
+          type="submit"
+          value="Register"
+        />
+
+        <p class="absolute bottom-6">
+          Already have an account
+          <a
+            class="hov-big text-my-n-yellow underline hover:text-my-n-blue transition-all duration-300 ease-in-out"
+            href="/login"
+            >Log in</a
+          >
+        </p>
+      </form>
+    </div>
+
+    <script src="/javascripts/login.js"></script>
+    <script src="/javascripts/register.js"></script>
+
+    <script> 
+      document.querySelector(".nav-mobile").style.top = "-415px";
+
+// Add an event listener to toggle display
+document.querySelector(".menu").addEventListener("click", function () {
+  const navMobile = document.querySelector(".nav-mobile");
+
+  if (navMobile.style.top === "-415px") {
+    navMobile.style.top = "100px";
+  } else {
+    navMobile.style.top = "-415px";
+  }
+});</script>
+  </body>
+</html>

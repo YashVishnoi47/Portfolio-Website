@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    user-select: none;
+    font-family: Poppins;
+
+}
+
+
+.page {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.page.enter {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+
+.logo-text::before {
+    position: absolute;
+    content: "Yash Bishnoi";
+    z-index: -1;
+    top: 1px;
+    right: -3px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px white;
+    /* width: 111px;
+    height: 0.8rem; */
+    /* background-color: #39373A; */
+  }
+
+
+  .y-name::before{
+    position: absolute;
+    content: "Yash Bishnoi";
+    z-index: -1;
+    margin-top: 5px;
+    margin-left: -2px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #0079FF;
+  }
+
+  .none{
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* Add this to your styles.css or within a <style> tag in your HTML */
+.content {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0; /* Initial state: invisible */
+  transform: translateY(20px); /* Slide down effect */
+}
+
+.content.show {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up effect */
+}
+
+.card-1 div{
+  opacity: 0;
+}
+
+
+
+.card-1:hover  div{
+  opacity: 1;
+}
+
+
+.projectc-1:hover .preview {
+    opacity: 1;
+    z-index: 20;
+}
+
+
+.projectc-1{
+  padding: 10px;
+}
+
+
+.projectc-1:hover{
+  background-color: #171717;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.cursor-blur{
+  filter: blur(200px);
+}
+
+
+
+
+
+
+
+.project-head::before{
+  position: absolute;
+    content: "Projects";
+    z-index: -1;
+    margin-top: -3px;
+    margin-left: 3px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #0079FF;
+}
+
+
+
+.git-p-btn:hover{
+  transform: translateY(-4px);
+}
+
+
+.git-p-btn:hover .hit-p-logo img{
+  transform: rotate(360deg);
+}
+
+
+
+
+/* Media */
+
+
+@media  screen and (max-width: 1000px) {
+  .skills-imags{
+    display: none;
+  }
+}
+
+
+
+@media  screen and (max-width: 600px) {
+  .menu{
+    display: flex;
+  }
+
+  .cursor-blur{
+    display: none;
+  }
+
+  .navbar{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+ 
+
+  .skills-t{
+    font-size: 1rem;
+  }
+
+
+  #name-cls{
+    font-size: 1.25rem;
+  }
+
+  .navbar .right{
+    display: none;
+  }
+}
+
+
+
+

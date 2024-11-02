@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style2.css" />
+  </head>
+
+  <body
+    class="w-full h-auto bg-black flex flex-col justify-center items-center text-white"
+  >
+    <div
+      class="cursor-blur absolute h-[200px] w-[200px] rounded-full bg-my-n-yellow transition-all duration-75 ease-in-out"
+    ></div>
+
+    <div
+      class="navbar relative z-20 w-full h-[6rem] flex justify-between items-center pr-8 pl-8"
+    >
+      <div class="logo text-my-n-yellow inline-block relative">
+        <a href="/" class="logo-text font-bold text-xl">Yash Bishnoi</a>
+      </div>
+      <div class="right flex gap-8 h-full justify-center items-center">
+        <a class="" href="/">Home</a>
+        <a class="" href="/contact">Contact</a>
+
+        <% if (isLoggedIn) { %>
+        <!-- Show "Profile Image" if user is logged in -->
+        <img
+          class="profile-img h-[3rem] z-10"
+          src="/images/profile.png"
+          alt="profile"
+        />
+        <% } else { %>
+        <!-- Show "Log in" and "Sign up" buttons if user is not logged in -->
+        <a
+          class="h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/login"
+          >Log in</a
+        >
+        <a
+          class="h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/signup"
+          >Sign up</a
+        >
+        <% } %>
+      </div>
+    </div>
+
+    <!-- <div class="allprojects h-96 p-6 w-[80%]">
+      <h1
+        class="project-head font-medium h-[50px] text-4xl w-full justify-center border-b-2 items-center text-my-n-yellow"
+      >
+        Projects
+      </h1>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+
+        <div
+          class="preview z-50 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[7.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-40 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute left-[180px] top-[10.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-30 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[23.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-20 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[25.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-10 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[33.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-20 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[38.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-20 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[37.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+
+      <div class="projectc-1 cursor-pointer h-24 border-b-2 flex items-center">
+        <div class="left flex items-center relative w-[50%]">
+          <h1 class="text-3xl">Project-1</h1>
+        </div>
+
+        <div
+          class="right flex flex-col items-end justify-center relative h-full w-[50%]"
+        >
+          <h1 class="text-xl">Full-Stack Development</h1>
+          <div
+            class="tech-logos opacity-100 justify-end items-center gap-2 flex w-[238px] h-[50%]"
+          >
+            <img class="h-8" src="/images/express js.png" alt="" />
+            <img class="h-4" src="/images/mongodb-g.png" alt="" />
+            <img class="h-6" src="/images/nodejs.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="preview z-20 backdrop-blur-2xl shadow-black-y2 rounded-md opacity-0 cursor-default h-[25rem] w-[25rem] border-2 transition-all duration-200 ease-in-out absolute right-[180px] top-[36.5rem]"
+        >
+          <img src="/images/ss-2.png" alt="" />
+          <h1
+            class="pin-image backdrop-blur-md text-white ml-2 mt-2 font-medium text-2xl"
+          >
+            Pinterest Clone
+          </h1>
+          <p class="mt-1 ml-2 text-my-text-2">Full-Stack Project</p>
+          <p class="mt-3 ml-2 text-my-text-2">
+            This is a Full-Stack Project made using Node.js, Express JS, Mongo
+            DB, Ejs
+          </p>
+
+          <a
+            target="_blank"
+            class="git-p-btn gap-4 bg-my-git-1 flex justify-between transition-all duration-200 ease-in-out items-center rounded-md ml-2 mt-3 h-[3rem] w-[8rem]"
+            href="https://github.com/YashVishnoi47/Pinterest-Clone"
+          >
+            <div
+              class="hit-p-logo rounded-md bg-my-git-2 flex justify-center items-center h-full w-11 border-white relative"
+            >
+              <img
+                class="transition-all duration-800 ease-in-out h-6"
+                src="/images/github-mark-white.png"
+                alt=""
+              />
+            </div>
+            <p class="mr-2">GitHub</p></a
+          >
+        </div>
+      </div>
+    </div> -->
+
+    <div
+      class="z-20 none backdrop:blur-lg account-info gap-3 flex flex-col pr-5 pl-5 items-center absolute right-6 border-2 h-[20rem] w-72"
+    >
+      <img class="h-[9rem]" src="/images/profile.png" alt="" />
+      <% if (user) { %>
+      <div class="user-name w-full flex gap-4 text-left text-white">
+        <p class="font-extrabold">Username -</p>
+        <%= user.name %>
+      </div>
+      <div class="user-email w-full flex gap-4 text-left text-white">
+        <p class="font-extrabold">E-mail -</p>
+        <%= user.email %>
+      </div>
+      <% } %>
+
+      <a
+        class="h-8 w-20 bottom-8 absolute flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+        href="/logout"
+        >Log out</a
+      >
+    </div>
+    <script src="/javascripts/login.js"></script>
+  </body>
+</html>

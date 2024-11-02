@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style2.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body
+    class="page w-full h-auto bg-black overflow-hidden text-white flex justify-center items-center flex-col"
+  >
+    <div
+      class="cursor-blur z-30 absolute h-[200px] w-[200px] rounded-full bg-my-n-yellow transition-all duration-75 ease-in-out"
+    ></div>
+
+    <div
+      class="navbar relative z-50 w-full h-[6rem] flex justify-between items-center pr-8 pl-8"
+    >
+      <div class="logo text-my-n-yellow inline-block relative">
+        <a href="/" class="logo-text font-bold text-xl">Yash Bishnoi</a>
+      </div>
+      <div class="right flex gap-8 h-full justify-center items-center">
+        <a class="hov-big" href="/">Home</a>
+        <a class="hov-big" href="/contact">Contact</a>
+
+        <% if (isLoggedIn) { %>
+        <!-- Show "Profile Image" if user is logged in -->
+        <img
+          class="hov-big profile-img h-[3rem]"
+          src="/images/profile.png"
+          alt="profile"
+        />
+        <% } else { %>
+        <!-- Show "Log in" and "Sign up" buttons if user is not logged in -->
+        <a
+          class="hov-big h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/login"
+          >Log in</a
+        >
+        <a
+          class="hov-big h-8 w-20 flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+          href="/signup"
+          >Sign up</a
+        >
+        <% } %>
+      </div>
+    </div>
+
+    <div
+      class="mt-10 border-2 gap-6 bg-my-black border-white text-white relative contact w-[85rem] p-10 min-h-[30rem] flex items-center flex-col"
+    >
+      <h1 class="text-4xl font-bold">Feel free to Contact me!</h1>
+      <img
+        class="profile-img h-[14rem]"
+        src="/images/profile.png"
+        alt="profile"
+      />
+
+      <div
+        class="flex gap-12 relative z-30 justify-center items-center social-icons w-full h-[3rem]"
+      >
+        <a class="hov-big cursor-pointer"
+          ><img
+            class="h-[2rem] scale-100 hover:scale-125 transition-all duration-900 ease-in-out"
+            href="https://www.instagram.com/bishnoiyash.code/?utm_source=ig_web_button_share_sheet"
+            src="/images/instagram.png"
+            alt="instagram"
+        /></a>
+        <a class="hov-big cursor-pointer" href=""
+          ><img
+            class="h-[2rem] scale-100 hover:scale-125 transition-all duration-900 ease-in-out"
+            src="/images/GitHub_Symbol_1.png"
+            alt="instagram"
+        /></a>
+        <a class="hov-big cursor-pointer" href=""
+          ><img
+            class="h-[2rem] scale-100 hover:scale-125 transition-all duration-900 ease-in-out"
+            src="/images/YouTube_Symbol_1.png"
+            alt="instagram"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Accoun Info -->
+    <div
+      class="z-50 none backdrop:blur-lg account-info gap-3 flex flex-col pr-5 pl-5 items-center absolute right-6 border-2 h-[20rem] w-72"
+    >
+      <img class="h-[9rem]" src="/images/profile.png" alt="" />
+      <% if (user) { %>
+      <div class="user-name w-full flex gap-4 text-left text-white">
+        <p class="font-extrabold">Username -</p>
+        <%= user.name %>
+      </div>
+      <div class="user-email w-full flex gap-4 text-left text-white">
+        <p class="font-extrabold">E-mail -</p>
+        <%= user.email %>
+      </div>
+      <% } %>
+
+      <a
+        class="h-8 w-20 bottom-8 absolute flex justify-center items-center bg-my-n-yellow text-black shadow-black-y transition-all duration-300 ease-in-out hover:shadow-none"
+        href="/logout"
+        >Log out</a
+      >
+    </div>
+
+    <script src="/javascripts/login.js"></script>
+  </body>
+</html>
